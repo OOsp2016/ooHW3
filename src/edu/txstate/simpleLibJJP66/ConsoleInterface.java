@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 //test comment change update
 // second test comment
+//did it work?
 public class ConsoleInterface {
 
 	static Scanner InputForUser = new Scanner(System.in);
