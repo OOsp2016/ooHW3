@@ -3,10 +3,6 @@ package edu.txstate.simpleLibJJP66;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-//test comment change update
-// second test comment
-//did it work?
-// No (///_-) Just like my life
 public class ConsoleInterface {
 
 	static Scanner InputForUser = new Scanner(System.in);
