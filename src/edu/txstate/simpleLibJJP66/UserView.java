@@ -23,7 +23,8 @@ public class UserView extends FrontEnd {
 				switch (answer) {
 
 				case 1:
-					// has Backend search lists
+					// Goes to User View Search Menu
+					UVSearch.uvSearchMenuChoice();
 					break;
 				case 2:
 					// brings you to the borrow menu
