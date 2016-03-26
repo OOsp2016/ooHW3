@@ -5,11 +5,11 @@ import java.util.InputMismatchException;
 public class UserView extends FrontEnd {
 
 	public static void UVMenu() {
-		System.out
-				.println("\nEnter 1 to Search" 
-						+ "\nEnter 2 to Borrow" 
-						+ "\nEnter 3 to Return" 
-						+ "\nEnter 4 to exit.");
+		System.out.println(
+				"\nEnter 1 to Search" 
+				+ "\nEnter 2 to Borrow" 
+				+ "\nEnter 3 to Return" 
+				+ "\nEnter 4 to exit.");
 	}
 
 	public static void UVMenuChoice() {
