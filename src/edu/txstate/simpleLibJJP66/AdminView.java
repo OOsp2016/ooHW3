@@ -4,11 +4,8 @@ import java.util.InputMismatchException;
 
 public class AdminView extends FrontEnd {
 	public static void AVMenu() {
-		System.out.println(
-				"\nEnter 1 to add users" 
-				+ "\nEnter 2 to remove users" 
-				+ "\nEnter 3 to list data" 
-				+ "\nEnter 4 to exit.");
+		System.out
+				.println("\nEnter 1 to add users" + "\nEnter 2 to remove users" + "\nEnter 3 to list data" + "\nEnter 4 to exit.");
 	}
 	
 	public static void AVMenuChoice() {
