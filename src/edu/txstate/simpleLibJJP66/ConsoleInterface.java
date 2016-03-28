@@ -15,7 +15,7 @@ public class ConsoleInterface {
 	public static void Start() {
 		System.out.println("\nWelcome to the Perez and Baize Library System."
 				+ "\nIf there is no serializable file detected, this program will"
-				+ "\ngenerate a set of Sample Objects which can be saved later.");
+				+ "\ngenerate a set of sample objects which could be saved later.");
 		// calls load data function
 		Data.LoadData();
 
@@ -39,9 +39,12 @@ public class ConsoleInterface {
 		Boolean Operating = true;
 		while (Operating) {
 			System.out.println(
-					"\nEnter 1 for save and quit." + "\nEnter 2 to add new books, journals, students, and faculty"
-							+ "\nEnter 3 to display transactions." + "\nEnter 4 to Search." + "\nEnter 5 to Borrow."
-							+ "\nEnter 6 to Return.");
+					"\nEnter 1 for save and quit." 
+					+ "\nEnter 2 to add new books, journals, students, and faculty"
+					+ "\nEnter 3 to display transactions."
+					+ "\nEnter 4 to Search." 
+					+ "\nEnter 5 to Borrow."
+					+ "\nEnter 6 to Return.");
 			try {
 				int answer = Operate.nextInt();
 
@@ -152,7 +155,7 @@ public class ConsoleInterface {
 			input = User.nextLine();
 			CurrentUser = Data.ListOfFaculty.pickFaculty(input);
 			if (CurrentUser == "wrong") {
-				System.out.println("\nStudent not found! Please enter a valid user name.");
+				System.out.println("\nFaculty member not found! Please enter a valid user name.");
 			}
 		}
 	}
