@@ -17,6 +17,8 @@ public class ViewMenu extends ConsoleWindow {
 	
 	public void start() {
 		UserView UV = new UserView();
+		LibrarianView LV = new LibrarianView();
+		AdminView AV = new AdminView();
 		
 		int choice = 0;
 		boolean exitProgram = false;
@@ -33,11 +35,11 @@ public class ViewMenu extends ConsoleWindow {
 					break;
 				case 2:
 					// Switch to librarian view
-					LibrarianView.lVMenuChoice();
+					LV.lVMenuChoice();
 					break;
 				case 3:
 					// Switch to admin view
-					AdminView.aVMenuChoice();
+					AV.aVMenuChoice();
 					break;
 				case 4:
 					//saveAndQuit();
