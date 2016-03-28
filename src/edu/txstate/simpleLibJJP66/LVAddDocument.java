@@ -2,19 +2,19 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class LVAddDocument extends LibrarianView{
-	public static void lVADMenu() {
+public class LVAddDocument extends ConsoleWindow{
+	public void printMenu() {
 		System.out.println(
 				"\nEnter 1 to add a new book" 
 				+ "\nEnter 2 to add a new journal" 
 				+ "\nEnter 3 to exit.");
 	}
 	
-	public static void lVADMenuChoice() {
+	public void lVADMenuChoice() {
 		boolean running = true;	
 		while (running) {
 			// Call lvAdMenu method to display options
-			lVADMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 				
@@ -47,12 +47,12 @@ public class LVAddDocument extends LibrarianView{
 		}
 	}
 	
-	public static void addBook() {
+	public void addBook() {
 		// Add book
 		System.out.println("\nEntered addBook()");
 	}
 	
-	public static void addJournal() {
+	public void addJournal() {
 		// Add journal
 		System.out.println("\nEntered addJournal()");
 	}

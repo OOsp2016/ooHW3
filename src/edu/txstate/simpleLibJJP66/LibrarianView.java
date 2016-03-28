@@ -2,19 +2,22 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class LibrarianView extends ViewMenu{
-	public static void lVMenu(){
+public class LibrarianView extends ConsoleWindow{
+	public void printMenu(){
 		System.out.println(
 				"\nEnter 1 to add new documents."
 				+ "\nEnter 2 view checked out documents."
 				+ "\nEnter 3 to exit.");
 	}
 	
-	public static void lVMenuChoice(){
+	public void lVMenuChoice(){
+		
+		LVAddDocument LVAD = new LVAddDocument();
+		
 		boolean running = true;
 		while (running) {
 			//Displays the librarian view menu
-			lVMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 
@@ -22,7 +25,7 @@ public class LibrarianView extends ViewMenu{
 
 				case 1:
 					// add documents
-					LVAddDocument.lVADMenuChoice();
+					LVAD.lVADMenuChoice();
 					break;
 				case 2:
 					// Prints transaction list
