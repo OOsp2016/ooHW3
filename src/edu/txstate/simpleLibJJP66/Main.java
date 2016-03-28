@@ -25,7 +25,7 @@ public class Main {
 		*/
 		
 		//This starts the console interface
-		ConsoleInterface.Start();
+		FrontEnd.start();
 		
 	}
 
