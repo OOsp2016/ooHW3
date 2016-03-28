@@ -44,5 +44,14 @@ public class Document implements Serializable {
 		return this.copies;
 	}
 
+	public void updateBorrow() {
+		copies -= 1;
+		
+	}
+
+	public void updateReturn() {
+		copies +=1;
+		
+	}
 
 }
