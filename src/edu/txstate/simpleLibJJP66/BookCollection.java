@@ -2,6 +2,7 @@ package edu.txstate.simpleLibJJP66;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class BookCollection implements Serializable {
@@ -12,6 +13,7 @@ public class BookCollection implements Serializable {
 	private static final long serialVersionUID = 1475966287610862386L;
 	// Creation of new list of books
 	private static List<Book> ListOfBooks;
+	private static LinkedList<Book> linkedListOfBooks;
 
 	// constructor of list of book
 	public BookCollection() {
