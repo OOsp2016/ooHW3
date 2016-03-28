@@ -1,6 +1,5 @@
 package edu.txstate.simpleLibJJP66;
 
-import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class ViewMenu extends ConsoleWindow {
@@ -16,6 +15,8 @@ public class ViewMenu extends ConsoleWindow {
 	}
 	
 	public void start() {
+		Data.LoadData();
+		
 		UserView UV = new UserView();
 		LibrarianView LV = new LibrarianView();
 		AdminView AV = new AdminView();

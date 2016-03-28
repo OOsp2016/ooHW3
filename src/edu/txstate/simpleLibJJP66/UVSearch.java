@@ -3,6 +3,7 @@ package edu.txstate.simpleLibJJP66;
 import java.util.InputMismatchException;
 
 public class UVSearch extends ConsoleWindow{
+
 	public void printMenu(){
 		System.out.println(
 				"\nEnter 1 to search books."
@@ -52,9 +53,9 @@ public class UVSearch extends ConsoleWindow{
 	private static void searchBook() {
 		System.out.println("\nEntered searchBooks()");
 		String input = "nothing";
-		//System.out.println("\nEnter Title or Author to search for: ");
-		//input = in.nextLine();
-		//lib.searchBooks(input);
+		System.out.println("\nEnter Title of Book to search for: ");
+		input = in.nextLine();
+		DocumentCollection.tryToSearch(input, Data.ListOfBooks);
 	}	
 	
 
