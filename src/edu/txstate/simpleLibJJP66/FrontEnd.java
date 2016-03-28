@@ -26,13 +26,16 @@ public class FrontEnd {
 
 				switch (choice) {
 				case 1:
+					// Switch to user view
 					UserView.UVMenuChoice();
 					break;
 				case 2:
-					//switchToLibrarianView();
+					// Switch to librarian view
+					LibrarianView.LVMenuChoice();
 					break;
 				case 3:
-					//switchToAdminView();
+					// Switch to admin view
+					AdminView.AVMenuChoice();
 					break;
 				case 4:
 					//saveAndQuit();
