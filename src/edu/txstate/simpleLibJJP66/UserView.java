@@ -21,19 +21,21 @@ public class UserView extends FrontEnd {
 				int answer = in.nextInt();
 
 				switch (answer) {
-
 				case 1:
 					// Goes to User View Search Menu
 					UVSearch.uvSearchMenuChoice();
 					break;
 				case 2:
 					// brings you to the borrow menu
+					UVBorrow.uvBorrowMenuChoice();
 					break;
 				case 3:
 					// return item menu
+					UVReturn.uvReturnMenuChoice();
 					break;
 				case 4:
 					// exits
+					System.out.println("\nExiting user view menu...");
 					running = false;
 					break;
 				default:

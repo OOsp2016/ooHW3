@@ -51,6 +51,7 @@ public class UVBorrow extends UserView{
 
 	private static void borrowBook() {
 		// allows the user to choose what book to borrow
+		System.out.println("\nEntered borrowBook()");
 		String borrow;
 		String bookTransaction = "nothing";
 		while (bookTransaction == "nothing") {
@@ -63,6 +64,7 @@ public class UVBorrow extends UserView{
 
 	private static void borrowJournal() {
 		//allows the user to choose what journal to borrow
+		System.out.println("\nEntered borrowJournal()");
 		String bookTransaction = "nothing";
 		String borrow;
 		while (bookTransaction == "nothing") {

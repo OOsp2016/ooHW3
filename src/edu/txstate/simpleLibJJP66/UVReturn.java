@@ -22,10 +22,6 @@ public class UVReturn extends UserView{
 				int answer = in.nextInt();
 
 				switch (answer) {
-				case 0:
-					System.out.println("\nExiting return menu...");
-					returning = false;
-					break;
 				case 1:
 					// returns book
 					System.out.println("\nAccepting book.");
@@ -53,9 +49,13 @@ public class UVReturn extends UserView{
 							fac.updateReturn(currentUser);
 					}*/
 					break;
+				case 3:
+					System.out.println("\nExiting return menu...");
+					returning = false;
+					break;
 				default:
 					System.err
-							.println("Please select a number between 0 and 2.");
+							.println("Please select a number between 1 and 3.");
 				}
 			} catch (InputMismatchException ex) {
 				System.err.println("Input missmatch. Please Try again." + ex);
@@ -70,6 +70,7 @@ public class UVReturn extends UserView{
 
 	private static String returnBook() {
 		//this allows the user to choose what book to return
+		System.out.println("\nEntered returnBook()");
 		String bookTransaction = null;
 		while (bookTransaction == null) {
 			System.out.println("\nEnter title of book to return: \n");
@@ -81,6 +82,7 @@ public class UVReturn extends UserView{
 
 	private static String returnJournal() {
 		//this allows the user to choose what journal to return
+		System.out.println("\nEntered returnJournal()");
 		String bookTransaction = null;
 		while (bookTransaction == null) {
 			System.out.println("\nEnter title of journal to return: \n");
