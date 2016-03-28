@@ -4,34 +4,34 @@ import java.util.InputMismatchException;
 
 public class UserView extends FrontEnd {
 
-	public static void UVMenu() {
+	public static void uVMenu() {
 		System.out.println(
-				"\nEnter 1 to Search" 
-				+ "\nEnter 2 to Borrow" 
-				+ "\nEnter 3 to Return" 
+				"\nEnter 1 to search." 
+				+ "\nEnter 2 to borrow document." 
+				+ "\nEnter 3 to return document." 
 				+ "\nEnter 4 to exit.");
 	}
 
-	public static void UVMenuChoice() {
+	public static void uVMenuChoice() {
 		boolean running = true;
 		while (running) {
 			//call UVMenu function to display options
-			UVMenu();
+			uVMenu();
 			try {
 				int answer = in.nextInt();
 
 				switch (answer) {
 				case 1:
 					// Goes to User View Search Menu
-					UVSearch.uvSearchMenuChoice();
+					UVSearch.uVSearchMenuChoice();
 					break;
 				case 2:
 					// brings you to the borrow menu
-					UVBorrow.uvBorrowMenuChoice();
+					UVBorrow.uVBorrowMenuChoice();
 					break;
 				case 3:
 					// return item menu
-					UVReturn.uvReturnMenuChoice();
+					UVReturn.uVReturnMenuChoice();
 					break;
 				case 4:
 					// exits

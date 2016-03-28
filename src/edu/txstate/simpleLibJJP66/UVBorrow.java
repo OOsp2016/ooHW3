@@ -3,18 +3,18 @@ package edu.txstate.simpleLibJJP66;
 import java.util.InputMismatchException;
 
 public class UVBorrow extends UserView{
-	public static void uvBorrowMenu(){
+	public static void uVBorrowMenu(){
 		System.out.println(
 				"\nEnter 1 to borrow a book."
 				+ "\nEnter 2 to borrow a journal."
 				+ "\nEnter 3 to exit.");
 	}
 	
-	public static void uvBorrowMenuChoice(){
+	public static void uVBorrowMenuChoice(){
 		Boolean borrowing = true;
 		// this while loop gives the user a menu for what to return
 		while (borrowing) {
-			uvBorrowMenu();
+			uVBorrowMenu();
 			try {
 				int answer = in.nextInt();
 				//int userType = 0;
