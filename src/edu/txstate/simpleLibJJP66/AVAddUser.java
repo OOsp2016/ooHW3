@@ -3,7 +3,7 @@ package edu.txstate.simpleLibJJP66;
 import java.util.InputMismatchException;
 
 public class AVAddUser extends AdminView{
-	public static void AVAUMenu() {
+	public static void aVAUMenu() {
 		System.out.println(
 		"\nEnter 1 to add a new student" 
 		+ "\nEnter 2 to add a new faculty member" 
@@ -11,25 +11,32 @@ public class AVAddUser extends AdminView{
 		+ "\nEnter 4 to exit.");
 	}
 	
-	public static void AVAUMenuChoice() {
+	public static void aVAUMenuChoice() {
 		boolean running = true;	
 		while (running) {
-			//call AVAUMenu function to display options
-			AVAUMenu();
+			// Call add user menu method to display options
+			aVAUMenu();
 			try {
 				int answer = in.nextInt();
 				
 				switch (answer) {
 					case 1:
 						// Add student
+						System.out.println("\nReady to add student.");
+						addStudent();
 						break;
 					case 2:
 						// Add faculty
+						System.out.println("\nReady to add faculty.");
+						addFaculty();
 						break;
 					case 3:
 						// Add staff
+						System.out.println("\nReady to add staff.");
+						addStaff();
 						break;
 					case 4:
+						System.out.println("\nExiting add user menu...");
 						running = false;
 						break;
 					default:
@@ -48,13 +55,16 @@ public class AVAddUser extends AdminView{
 	
 	public static void addStudent() {
 		// Add new student
+		System.out.println("\nEntered addStudent()");
 	}
 	
 	public static void addFaculty() {
 		// Add new faculty
+		System.out.println("\nEntered addFaculty()");
 	}
 	
 	public static void addStaff() {
 		// Add new staff
+		System.out.println("\nEntered addStaff()");
 	}
 }

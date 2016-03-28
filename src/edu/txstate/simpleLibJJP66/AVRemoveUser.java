@@ -3,33 +3,40 @@ package edu.txstate.simpleLibJJP66;
 import java.util.InputMismatchException;
 
 public class AVRemoveUser extends AdminView{
-	public static void AVRUMenu() {
+	public static void aVRUMenu() {
 		System.out.println(
-		"\nEnter 1 to add a new student" 
-		+ "\nEnter 2 to add a new faculty member" 
-		+ "\nEnter 3 to add new staff member"
+		"\nEnter 1 to remove student" 
+		+ "\nEnter 2 to remove faculty member" 
+		+ "\nEnter 3 to remove staff member"
 		+ "\nEnter 4 to exit.");
 	}
 	
-	public static void AVAUMenuChoice() {
+	public static void aVRUMenuChoice() {
 		boolean running = true;	
 		while (running) {
-			//call AVRUMenu function to display options
-			AVRUMenu();
+			// Call remove user menu method to display options
+			aVRUMenu();
 			try {
 				int answer = in.nextInt();
 				
 				switch (answer) {
 					case 1:
 						// Remove student
+						System.out.println("\nReady to remove student.");
+						removeStudent();
 						break;
 					case 2:
 						// Remove faculty
+						System.out.println("\nReady to remove faculty.");
+						removeFaculty();
 						break;
 					case 3:
 						// Remove staff
+						System.out.println("\nReady to remove staff.");
+						removeStaff();
 						break;
 					case 4:
+						System.out.println("\nExiting remove user menu...");
 						running = false;
 						break;
 					default:
@@ -46,15 +53,18 @@ public class AVRemoveUser extends AdminView{
 		}
 	}
 	
-	public static void RemoveStudent() {
+	public static void removeStudent() {
 		// Remove new student
+		System.out.println("\nEntered removeStudent()");
 	}
 	
-	public static void RemoveFaculty() {
+	public static void removeFaculty() {
 		// Remove new faculty
+		System.out.println("\nEntered removeFaculty()");
 	}
 	
-	public static void RemoveStaff() {
+	public static void removeStaff() {
 		// Remove new staff
+		System.out.println("\nEntered removeStaff()");
 	}
 }
