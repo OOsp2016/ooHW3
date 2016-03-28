@@ -23,7 +23,9 @@ public class Main {
 		*/
 		
 		// Execute library system front-end.
-		ViewMenu.start();
+		ViewMenu menu;
+		menu = new ViewMenu();
+		menu.start();
 		
 	}
 
