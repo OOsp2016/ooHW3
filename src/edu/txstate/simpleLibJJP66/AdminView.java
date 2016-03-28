@@ -2,7 +2,7 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class AdminView extends FrontEnd {
+public class AdminView extends ViewMenu {
 	public static void aVMenu() {
 		System.out.println(
 				"\nEnter 1 to add users" 

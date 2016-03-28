@@ -52,8 +52,8 @@ public class UVSearch extends UserView{
 	private static void searchBook() {
 		System.out.println("\nEntered searchBooks()");
 		String input = "nothing";
-		System.out.println("\nEnter Title or Author to search for: ");
-		input = in.nextLine();
+		//System.out.println("\nEnter Title or Author to search for: ");
+		//input = in.nextLine();
 		//lib.searchBooks(input);
 	}	
 	
@@ -62,8 +62,8 @@ public class UVSearch extends UserView{
 		System.out.println("\nEntered searchJournals()");
 		String input = "nothing";
 
-		System.out.println("\nEnter Title to search for: ");
-		input = in.nextLine();
+		//System.out.println("\nEnter Title to search for: ");
+		//input = in.nextLine();
 		//jour.searchJournals(input);
 	}
 

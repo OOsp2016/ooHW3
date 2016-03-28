@@ -23,7 +23,7 @@ public class Main {
 		*/
 		
 		// Execute library system front-end.
-		FrontEnd.start();
+		ViewMenu.start();
 		
 	}
 

@@ -3,11 +3,11 @@ package edu.txstate.simpleLibJJP66;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-public class FrontEnd {
+public class ViewMenu extends ConsoleWindow {
 
-	static Scanner in = new Scanner(System.in);
+	//static Scanner in = new Scanner(System.in);
 	
-	public static void introMenu(){
+	protected void printMenu(){
 		System.out.println(
 				"\n1. Switch to user view. \n"
 				+ "2. Switch to librarian view. \n"
@@ -15,11 +15,11 @@ public class FrontEnd {
 				+ "4. Exit program.");
 	}
 	
-	public static void start() {
+	public void start() {
 		int choice = 0;
 		boolean exitProgram = false;
 		do {
-			introMenu();
+			printMenu();
 			try {
 				choice = in.nextInt();
 				in.nextLine(); // clear the new line character from the input

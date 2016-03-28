@@ -2,7 +2,7 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class UserView extends FrontEnd {
+public class UserView extends ViewMenu {
 
 	public static void uVMenu() {
 		System.out.println(

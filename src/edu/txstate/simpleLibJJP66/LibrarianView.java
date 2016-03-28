@@ -2,7 +2,7 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class LibrarianView extends FrontEnd{
+public class LibrarianView extends ViewMenu{
 	public static void lVMenu(){
 		System.out.println(
 				"\nEnter 1 to add new documents."

@@ -54,11 +54,11 @@ public class UVBorrow extends UserView{
 		System.out.println("\nEntered borrowBook()");
 		String borrow;
 		String bookTransaction = "nothing";
-		while (bookTransaction == "nothing") {
-			System.out.println("\nEnter title of book to borrow: \n");
-			borrow= in.nextLine();
+		//while (bookTransaction == "nothing") {
+			//System.out.println("\nEnter title of book to borrow: \n");
+			//borrow= in.nextLine();
 			//bookTransaction = lib.Borrow(borrow);
-		}
+		//}
 		//return bookTransaction;
 	}
 
@@ -67,11 +67,11 @@ public class UVBorrow extends UserView{
 		System.out.println("\nEntered borrowJournal()");
 		String bookTransaction = "nothing";
 		String borrow;
-		while (bookTransaction == "nothing") {
-			System.out.println("\nEnter title of journal to borrow: \n");
-			borrow = in.nextLine();
+		//while (bookTransaction == "nothing") {
+	//		System.out.println("\nEnter title of journal to borrow: \n");
+	//		borrow = in.nextLine();
 			//bookTransaction = jour.Borrow(borrow);
-		}
+	//	}
 		//return bookTransaction;
 	}
 	

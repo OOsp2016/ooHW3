@@ -71,11 +71,11 @@ public class UVReturn extends UserView{
 		//this allows the user to choose what book to return
 		System.out.println("\nEntered returnBook()");
 		String bookTransaction = null;
-		while (bookTransaction == null) {
-			System.out.println("\nEnter title of book to return: \n");
-			String returnItem = in.nextLine();
+		//while (bookTransaction == null) {
+			//System.out.println("\nEnter title of book to return: \n");
+		//String returnItem = in.nextLine();
 			//bookTransaction = lib.Return(returnItem);
-		}
+		//}
 		return bookTransaction;
 	}
 
@@ -83,11 +83,11 @@ public class UVReturn extends UserView{
 		//this allows the user to choose what journal to return
 		System.out.println("\nEntered returnJournal()");
 		String bookTransaction = null;
-		while (bookTransaction == null) {
-			System.out.println("\nEnter title of journal to return: \n");
-			String returnItem = in.nextLine();
+		//while (bookTransaction == null) {
+			//System.out.println("\nEnter title of journal to return: \n");
+			//String returnItem = in.nextLine();
 			//bookTransaction = jour.Return(returnItem);
-		}
+		//}
 		return bookTransaction;
 	}
 }
