@@ -2,7 +2,7 @@ package edu.txstate.simpleLibJJP66;
 
 import java.io.Serializable;
 
-public class Journal implements Serializable{
+public class Journal extends Document{
 	/**
 	 * 
 	 */
