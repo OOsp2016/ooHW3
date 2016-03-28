@@ -13,6 +13,11 @@ public class UserView extends ConsoleWindow {
 	}
 
 	public void uVMenuChoice() {
+		UVSearch UVS = new UVSearch();
+		UVBorrow UVB = new UVBorrow();
+		UVReturn UVR = new UVReturn();
+		
+		
 		boolean running = true;
 		while (running) {
 			//call UVMenu function to display options
@@ -23,15 +28,15 @@ public class UserView extends ConsoleWindow {
 				switch (answer) {
 				case 1:
 					// Goes to User View Search Menu
-					UVSearch.uVSearchMenuChoice();
+					UVS.uVSearchMenuChoice();
 					break;
 				case 2:
 					// brings you to the borrow menu
-					UVBorrow.uVBorrowMenuChoice();
+					UVB.uVBorrowMenuChoice();
 					break;
 				case 3:
 					// return item menu
-					UVReturn.uVReturnMenuChoice();
+					UVR.uVReturnMenuChoice();
 					break;
 				case 4:
 					// exits

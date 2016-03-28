@@ -16,6 +16,8 @@ public class ViewMenu extends ConsoleWindow {
 	}
 	
 	public void start() {
+		UserView UV = new UserView();
+		
 		int choice = 0;
 		boolean exitProgram = false;
 		do {
@@ -27,7 +29,7 @@ public class ViewMenu extends ConsoleWindow {
 				switch (choice) {
 				case 1:
 					// Switch to user view
-					UserView.uVMenuChoice();
+					UV.uVMenuChoice();
 					break;
 				case 2:
 					// Switch to librarian view
