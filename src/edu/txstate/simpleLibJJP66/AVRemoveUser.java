@@ -7,8 +7,7 @@ public class AVRemoveUser extends ConsoleWindow{
 		System.out.println(
 		"\nEnter 1 to remove student" 
 		+ "\nEnter 2 to remove faculty member" 
-		+ "\nEnter 3 to remove staff member"
-		+ "\nEnter 4 to exit.");
+		+ "\nEnter 3 to exit");
 	}
 	
 	public void aVRUMenuChoice() {
@@ -31,16 +30,11 @@ public class AVRemoveUser extends ConsoleWindow{
 						removeFaculty();
 						break;
 					case 3:
-						// Remove staff
-						System.out.println("\nReady to remove staff.");
-						removeStaff();
-						break;
-					case 4:
 						System.out.println("\nExiting remove user menu...");
 						running = false;
 						break;
 					default:
-						System.err.println("Please select a number between 1 and 4.");
+						System.err.println("Please select a number between 1 and 3.");
 				}
 			} catch (InputMismatchException ex) {
 				System.err.println("Input missmatch. Please Try again." + ex);

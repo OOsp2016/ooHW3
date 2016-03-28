@@ -7,8 +7,7 @@ public class AVAddUser extends ConsoleWindow{
 		System.out.println(
 		"\nEnter 1 to add a new student" 
 		+ "\nEnter 2 to add a new faculty member" 
-		+ "\nEnter 3 to add new staff member"
-		+ "\nEnter 4 to exit.");
+		+ "\nEnter 3 to exit.");
 	}
 	
 	public void aVAUMenuChoice() {
@@ -31,16 +30,11 @@ public class AVAddUser extends ConsoleWindow{
 						addFaculty();
 						break;
 					case 3:
-						// Add staff
-						System.out.println("\nReady to add staff.");
-						addStaff();
-						break;
-					case 4:
 						System.out.println("\nExiting add user menu...");
 						running = false;
 						break;
 					default:
-						System.err.println("Please select a number between 1 and 4.");
+						System.err.println("Please select a number between 1 and 3.");
 				}
 			} catch (InputMismatchException ex) {
 				System.err.println("Input missmatch. Please Try again." + ex);
@@ -61,10 +55,5 @@ public class AVAddUser extends ConsoleWindow{
 	public static void addFaculty() {
 		// Add new faculty
 		System.out.println("\nEntered addFaculty()");
-	}
-	
-	public static void addStaff() {
-		// Add new staff
-		System.out.println("\nEntered addStaff()");
 	}
 }

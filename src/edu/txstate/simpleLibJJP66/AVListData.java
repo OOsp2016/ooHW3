@@ -9,8 +9,7 @@ public class AVListData extends ConsoleWindow{
 		+ "\nEnter 2 to list journals" 
 		+ "\nEnter 3 to list students"
 		+ "\nEnter 4 to list faculty"
-		+ "\nEnter 5 to list staff"
-		+ "\nEnter 6 to exit.");
+		+ "\nEnter 5 to exit.");
 	}
 	
 	public void aVLDMenuChoice() {
@@ -43,16 +42,11 @@ public class AVListData extends ConsoleWindow{
 						listFaculty();
 						break;
 					case 5:
-						// List Staff
-						System.out.println("\nReady to list staff.");
-						listStaff();
-						break;
-					case 6:
 						System.out.println("\nExiting list data menu...");
 						running = false;
 						break;
 					default:
-						System.err.println("Please select a number between 1 and 6.");
+						System.err.println("Please select a number between 1 and 5.");
 				}
 			} catch (InputMismatchException ex) {
 				System.err.println("Input missmatch. Please Try again." + ex);
@@ -83,10 +77,5 @@ public class AVListData extends ConsoleWindow{
 	public static void listFaculty() {
 		// List faculty
 		System.out.println("\nEntered listFaculty()");
-	}
-	
-	public static void listStaff() {
-		// List staff
-		System.out.println("\nEntered listStaff()");
 	}
 }
