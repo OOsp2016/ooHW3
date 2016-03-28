@@ -14,6 +14,9 @@ public class BookCollection extends DocumentCollection implements Serializable {
 	// Creation of new list of books
 	private static LinkedList<Book> ListOfBooks;
 //	private static LinkedList<Book> linkedListOfBooks;
+	
+	public DocumentSearch searchType;
+
 
 	// constructor of list of book
 	public BookCollection() {
@@ -103,6 +106,10 @@ public class BookCollection extends DocumentCollection implements Serializable {
 				return "nothing";
 			}
 			return returnedBook;
+	}
+	
+	public void tryToSearch(String input, BookCollection listOfBooks2){
+		searchType.search(input, listOfBooks2);
 	}
 
 	// end class

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public interface DocumentSearch {
 
-	void search(String input, LinkedList<Document> list);
+	void search(String input, LinkedList<Book> list);
 	
 }
 /*
@@ -15,17 +15,17 @@ class SearchAuthor implements DocumentSearch{
 
 class SearchTitle implements DocumentSearch{
 	
-	public void search(String searchInput, LinkedList<Document> list){
+	public void search(String searchInput, LinkedList<Book> list){
 		Boolean search = true;
 		Boolean found = false;
 		String output = null;
 		while (search) {
 
 			for (int i = 0; i < list.size(); i++) {
-				Document TempDocument = list.get(i);
+				Book TempBook = list.get(i);
 				// If statement to compare to title and publisher and author
-				if (TempDocument.getTitle().equals(searchInput)) {
-					TempDocument.displayDocument();
+				if (TempBook.getTitle().equals(searchInput)) {
+					TempBook.displayBook();
 					System.out.println(output);
 					found = true;
 					// end if statement

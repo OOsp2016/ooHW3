@@ -27,7 +27,7 @@ public class DocumentCollection implements Serializable{
 		linkedListOfDocuments.remove(removeDocument);
 	}
 	
-	public void tryToSearch(String input, LinkedList<Document> list){
+	public void tryToSearch(String input, LinkedList<Book> list){
 		searchType.search(input, list);
 	}
 
