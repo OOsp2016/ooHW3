@@ -13,6 +13,8 @@ public class Document implements Serializable {
 	private String date;
 	private int copies;
 	
+	public DocumentSearch searchType;
+	
 	public void setTitle(String newTitle){
 		this.title = newTitle;
 	}
