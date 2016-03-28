@@ -1,9 +1,7 @@
 package edu.txstate.simpleLibJJP66;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class BookCollection extends DocumentCollection implements Serializable {
 
@@ -12,7 +10,7 @@ public class BookCollection extends DocumentCollection implements Serializable {
 	 */
 	private static final long serialVersionUID = 1475966287610862386L;
 	// Creation of new list of books
-	private static LinkedList<Book> ListOfBooks;
+	static LinkedList<Book> LinkList;
 //	private static LinkedList<Book> linkedListOfBooks;
 	
 	public static DocumentSearch searchType;
@@ -20,25 +18,25 @@ public class BookCollection extends DocumentCollection implements Serializable {
 
 	// constructor of list of book
 	public BookCollection() {
-		ListOfBooks = new LinkedList<Book>();
+		LinkList = new LinkedList<Book>();
 	}
 
 	// adds a new book
 	public void addBook(Book newBook) {
-		ListOfBooks.add(newBook);
+		LinkList.add(newBook);
 	}
 
 	// removes a book
 	public void removeBook(Book removeBook) {
-		ListOfBooks.remove(removeBook);
+		LinkList.remove(removeBook);
 	}
 
 	// lists all books in the collection
 	public String listBookCollection() {
 		String total = "";
 
-		for (int i = 0; i < ListOfBooks.size(); i++) {
-			Book TempBook = ListOfBooks.get(i);
+		for (int i = 0; i < LinkList.size(); i++) {
+			Book TempBook = LinkList.get(i);
 			total = total + TempBook.getTitle() + "\n" + TempBook.getPublisher() + "\n" + TempBook.getDate() + "\n"
 					+ TempBook.getISBN() + "\n" + TempBook.getCopies() + "\n" + TempBook.getAuthors() + "\n";
 		}
@@ -52,12 +50,12 @@ public class BookCollection extends DocumentCollection implements Serializable {
 		String output = null;
 		while (search) {
 
-			for (int i = 0; i < ListOfBooks.size(); i++) {
-				Book TempBook = ListOfBooks.get(i);
+			for (int i = 0; i < LinkList.size(); i++) {
+				Book TempBook = LinkList.get(i);
 				// If statement to compare to title and publisher and author
 				if (TempBook.getTitle().equals(input) || TempBook.getPublisher().equals(input)
 						|| TempBook.findAuthor(input) == true) {
-					output = TempBook.displayBook();
+					output = "\n" + TempBook.displayBook();
 					System.out.println(output);
 					found = true;
 					// end if statement
@@ -75,8 +73,8 @@ public class BookCollection extends DocumentCollection implements Serializable {
 	public String Borrow(String Borrow) {
 		boolean found = false;
 		String borrowedBook = null;
-			for (int i = 0; i < ListOfBooks.size(); i++) {
-				Book b = ListOfBooks.get(i);
+			for (int i = 0; i < LinkList.size(); i++) {
+				Book b = LinkList.get(i);
 				if (b.getTitle().equals(Borrow)){
 					found = true;
 					b.updateBorrow();
@@ -93,8 +91,8 @@ public class BookCollection extends DocumentCollection implements Serializable {
 	public String returnBook(String returnItem) {
 		boolean found = false;
 		String returnedBook = null;
-			for (int i = 0; i < ListOfBooks.size(); i++) {
-				Book b = ListOfBooks.get(i);
+			for (int i = 0; i < LinkList.size(); i++) {
+				Book b = LinkList.get(i);
 				if (b.getTitle().equals(returnItem)) {
 					found = true;
 					b.updateReturn();
@@ -108,8 +106,8 @@ public class BookCollection extends DocumentCollection implements Serializable {
 			return returnedBook;
 	}
 	
-	public static void tryToSearch(String input){
-		searchType.search(input, ListOfBooks);
+	public void tryToSearch(String input){
+		searchType.search(input);
 	}
 
 	// end class
