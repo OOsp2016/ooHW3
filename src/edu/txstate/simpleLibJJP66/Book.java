@@ -1,13 +1,11 @@
 package edu.txstate.simpleLibJJP66;
 
-import java.io.Serializable;
-
 public class Book extends Document {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6761136501477404289L;
+	private static final long serialVersionUID = -6106063684215068243L;
 
 	// Book variables
 	private String Title;

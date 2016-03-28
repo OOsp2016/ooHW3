@@ -1,12 +1,11 @@
 package edu.txstate.simpleLibJJP66;
 
-import java.io.Serializable;
-
 public class Journal extends Document{
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 4404982486121315288L;
+	private static final long serialVersionUID = -249610661948403768L;
 
 	// Journal variables
 	private String Title;
