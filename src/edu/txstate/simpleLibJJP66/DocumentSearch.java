@@ -18,8 +18,8 @@ class SearchTitle implements DocumentSearch{
 		String output = null;
 		while (search) {
 
-			for (int i = 0; i < ListOfBooks.size(); i++) {
-				Book TempBook = ListOfBooks.get(i);
+			for (int i = 0; i < linkedListOfDocuments.size(); i++) {
+				Book TempBook = linkedListOfDocuments.get(i);
 				// If statement to compare to title and publisher and author
 				if (TempBook.getTitle().equals(input) || TempBook.getPublisher().equals(input)
 						|| TempBook.findAuthor(input) == true) {
