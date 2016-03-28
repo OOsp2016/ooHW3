@@ -10,41 +10,26 @@ public class Author implements Serializable{
 	private static final long serialVersionUID = 2703703673890678886L;
 
 	// Variables for Author
-	private String FirstName;
-
-	private String LastName;
+	private String name;
 
 	// Default constructor
 	public Author() {
-		setFirstName("First Name");
-		setLastName("Last Name");
-
+		setName("Author Name");
 	}
 
 	// Parameter constructor
-	public Author(String ConstructFirstName, String ConstructLastName) {
-		setFirstName(ConstructFirstName);
-		setLastName(ConstructLastName);
+	public Author(String ConstructName) {
+		setName(ConstructName);
 	}
 
 	// Getter for First Name Variable
-	public String getFirstName() {
-		return FirstName;
+	public String getName() {
+		return name;
 	}
 
 	// Setter First Name Variable
-	public void setFirstName(String firstName) {
-		this.FirstName = firstName;
-	}
-
-	// Getter for Last Name
-	public String getLastName() {
-		return LastName;
-	}
-
-	// Setter for Last Name
-	public void setLastName(String lastName) {
-		this.LastName = lastName;
+	public void setName(String newName) {
+		this.name = newName;
 	}
 
 	// Overrides equals function so object can be removed
