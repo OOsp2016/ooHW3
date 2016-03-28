@@ -23,13 +23,16 @@ public class LibrarianView extends FrontEnd{
 
 				case 1:
 					// add documents
+					System.out.println("\nReady to add documents.");
 					break;
 				case 2:
 					// Prints transaction list
+					System.out.println("\nPrinting out transaction list.");
 					//System.out.println(Backend.trans.toString());
 					break;
 				case 3:
-					//exits
+					// Exit
+					System.out.println("\nExiting librarian view...");
 					running = false;
 					break;
 				default:

@@ -21,11 +21,14 @@ public class LVAddDocument extends LibrarianView{
 				switch (answer) {
 					case 1:
 						// Add new book
+						System.out.println("\nReady to add new book.");
 						break;
 					case 2:
 						// Add new journal
+						System.out.println("\nReady to add new journal.");
 						break;
 					case 3:
+						System.out.println("\nExiting librarian view...");
 						running = false;
 						break;
 					default:
