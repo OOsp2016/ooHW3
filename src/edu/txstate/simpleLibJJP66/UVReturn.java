@@ -2,21 +2,21 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class UVReturn extends UserView{
-	public static void uVReturnMenu(){
+public class UVReturn extends ConsoleWindow{
+	public void printMenu(){
 		System.out.println(
 				"\nEnter 1 to return a book."
 				+ "\nEnter 2 to return a journal."
 				+ "\nEnter 3 to exit.");
 	}
 	
-	public static void uVReturnMenuChoice(){
+	public void uVReturnMenuChoice(){
 		// This method returns an item.
 		String book = "";
 		Boolean returning = true;
 		// while loop for return options
 		while (returning) {
-			uVReturnMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 

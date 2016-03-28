@@ -2,19 +2,19 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class UVSearch extends UserView{
-	public static void uVSearchMenu(){
+public class UVSearch extends ConsoleWindow{
+	public void printMenu(){
 		System.out.println(
 				"\nEnter 1 to search books."
 				+ "\nEnter 2 to search journals."
 				+ "\nEnter 3 to exit.");
 	}
 	
-	public static void uVSearchMenuChoice() {
+	public void uVSearchMenuChoice() {
 		Boolean searching = true;
 		// while loop for menu
 		while (searching) {
-			uVSearchMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 

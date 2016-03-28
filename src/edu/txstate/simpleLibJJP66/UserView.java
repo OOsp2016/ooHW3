@@ -2,9 +2,9 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class UserView extends ViewMenu {
+public class UserView extends ConsoleWindow {
 
-	public static void uVMenu() {
+	public void printMenu() {
 		System.out.println(
 				"\nEnter 1 to search." 
 				+ "\nEnter 2 to borrow document." 
@@ -12,11 +12,11 @@ public class UserView extends ViewMenu {
 				+ "\nEnter 4 to exit.");
 	}
 
-	public static void uVMenuChoice() {
+	public void uVMenuChoice() {
 		boolean running = true;
 		while (running) {
 			//call UVMenu function to display options
-			uVMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 
