@@ -39,7 +39,7 @@ class SearchTitle implements DocumentSearch{
 			search = false;
 		}
 	}
-
+}
 
 
 /*class SearchPublisher implements DocumentSearch{
