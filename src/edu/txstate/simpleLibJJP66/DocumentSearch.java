@@ -1,29 +1,31 @@
 package edu.txstate.simpleLibJJP66;
 
+import java.util.LinkedList;
+
 public interface DocumentSearch {
 
-	void search();
+	void search(String input, LinkedList<Document> list);
 	
 }
-
+/*
 class SearchAuthor implements DocumentSearch{
 	public void search(){
 	}
-}
+}*/
 
 class SearchTitle implements DocumentSearch{
-	public void search(){
+	
+	public void search(String searchInput, LinkedList<Document> list){
 		Boolean search = true;
 		Boolean found = false;
 		String output = null;
 		while (search) {
 
-			for (int i = 0; i < linkedListOfDocuments.size(); i++) {
-				Book TempBook = linkedListOfDocuments.get(i);
+			for (int i = 0; i < list.size(); i++) {
+				Document TempDocument = list.get(i);
 				// If statement to compare to title and publisher and author
-				if (TempBook.getTitle().equals(input) || TempBook.getPublisher().equals(input)
-						|| TempBook.findAuthor(input) == true) {
-					output = TempBook.displayBook();
+				if (TempDocument.getTitle().equals(searchInput)) {
+					//output = TempDocument.displayBook();
 					System.out.println(output);
 					found = true;
 					// end if statement
@@ -39,7 +41,7 @@ class SearchTitle implements DocumentSearch{
 	}
 }
 
-class SearchPublisher implements DocumentSearch{
+/*class SearchPublisher implements DocumentSearch{
 	public void search(){
 	}
-}
+}*/
