@@ -39,6 +39,7 @@ public class FrontEnd {
 					break;
 				case 4:
 					//saveAndQuit();
+					System.out.println("\nExiting program...");
 					exitProgram = true;
 					break;
 				default:
