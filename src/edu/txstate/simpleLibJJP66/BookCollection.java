@@ -15,7 +15,7 @@ public class BookCollection extends DocumentCollection implements Serializable {
 	private static LinkedList<Book> ListOfBooks;
 //	private static LinkedList<Book> linkedListOfBooks;
 	
-	public DocumentSearch searchType;
+	public static DocumentSearch searchType;
 
 
 	// constructor of list of book
@@ -108,8 +108,8 @@ public class BookCollection extends DocumentCollection implements Serializable {
 			return returnedBook;
 	}
 	
-	public void tryToSearch(String input, BookCollection listOfBooks2){
-		searchType.search(input, listOfBooks2);
+	public static void tryToSearch(String input, BookCollection listOfBooks){
+		searchType.search(input, listOfBooks);
 	}
 
 	// end class

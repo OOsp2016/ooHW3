@@ -50,16 +50,16 @@ public class UVSearch extends ConsoleWindow{
 	}
 
 
-	private static void searchBook() {
+	private void searchBook() {
 		System.out.println("\nEntered searchBooks()");
 		String input = "nothing";
 		System.out.println("\nEnter Title of Book to search for: ");
 		input = in.nextLine();
-		Data.BookCollection.tryToSearch(input, Data.ListOfBooks);
+		BookCollection.tryToSearch(input, Data.ListOfBooks);
 	}	
 	
 
-	private static void searchJournal() {
+	private void searchJournal() {
 		System.out.println("\nEntered searchJournals()");
 		String input = "nothing";
 
