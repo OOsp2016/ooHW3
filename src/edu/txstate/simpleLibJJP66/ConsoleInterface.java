@@ -13,8 +13,8 @@ public class ConsoleInterface {
 	static int UserType = 0;
 
 	public static void Start() {
-		System.out.println("\nWelcome to Julius Perez Library System."
-				+ "\nIf there is no serializable file detected, the program will"
+		System.out.println("\nWelcome to the Perez and Baize Library System."
+				+ "\nIf there is no serializable file detected, this program will"
 				+ "\ngenerate a set of Sample Objects which can be saved later.");
 		// calls load data function
 		Data.LoadData();
