@@ -32,7 +32,7 @@ public class Book extends Document {
 
 	// Parameter constructor
 	public Book(String ConstructTitle, String ConstructPublisher, String ConstructDate, String ConstructISBN,
-			int ConstructCopies, String ConstructAuthorFirstName, String ConstructAuthorSecondName) {
+			int ConstructCopies, String ConstructAuthorName) {
 
 		AuthorListForBook = new AuthorCollection();
 
@@ -44,7 +44,7 @@ public class Book extends Document {
 
 		// creates author object, and removes the default one because apparently
 		// it will always be created.
-		Author SpecifiedAuthor = new Author(ConstructAuthorFirstName, ConstructAuthorSecondName);
+		Author SpecifiedAuthor = new Author(ConstructAuthorName);
 		AuthorListForBook.addAuthor(SpecifiedAuthor);
 	}
 
@@ -71,18 +71,16 @@ public class Book extends Document {
 	}
 
 	// adds an author
-	public void addAnAuthor(String NewAuthorFirstName, String NewAuthorLastName) {
+	public void addAnAuthor(String NewAuthorName) {
 		Author newAuthor = new Author();
-		newAuthor.setFirstName(NewAuthorFirstName);
-		newAuthor.setLastName(NewAuthorLastName);
+		newAuthor.setName(NewAuthorName);
 		AuthorListForBook.addAuthor(newAuthor);
 	}
 
 	// removes an author
-	public void removeAnAuthor(String AuthorToRemoveFirstName, String AuthorToRemoveLastName) {
+	public void removeAnAuthor(String AuthorToRemoveName) {
 		Author removeAuthor = new Author();
-		removeAuthor.setFirstName(AuthorToRemoveFirstName);
-		removeAuthor.setLastName(AuthorToRemoveLastName);
+		removeAuthor.setName(AuthorToRemoveName);
 		AuthorListForBook.removeAuthor(removeAuthor);
 	}
 

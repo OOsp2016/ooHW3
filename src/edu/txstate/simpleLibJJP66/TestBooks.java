@@ -25,7 +25,7 @@ public class TestBooks {
 				System.out.println(TestBookOne.getDate());
 				System.out.println(TestBookOne.getISBN());
 				System.out.println(TestBookOne.getCopies());
-				TestBookOne.addAnAuthor("SecondFirstName", "SecondLastName");
+				TestBookOne.addAnAuthor("SecondFirstName");
 
 				System.out.println(TestBookOne.getAuthors());
 
@@ -37,11 +37,11 @@ public class TestBooks {
 				System.out.println(TestBookOne.getDate());
 				System.out.println(TestBookOne.getISBN());
 				System.out.println(TestBookOne.getCopies());
-				TestBookOne.removeAnAuthor("SecondFirstName", "SecondLastName");
+				TestBookOne.removeAnAuthor("SecondFirstName");
 				System.out.println(TestBookOne.getAuthors());	
 				
 				//Test to add second book with specific parameters
-				Book TestBookTwo = new Book("1984", "Harvill Secker", "June 8, 1949", "4313241", 1, "George", "Orwell");
+				Book TestBookTwo = new Book("1984", "Harvill Secker", "June 8, 1949", "4313241", 1, "George Orwell");
 				
 				ListOfBooks.addBook(TestBookTwo);
 				
@@ -59,8 +59,8 @@ public class TestBooks {
 				
 				//Test to add authors to book one and two and see if they display correctly
 				System.out.println("***Test Display ListOfBooks with multiple Authors***");
-				TestBookOne.addAnAuthor("Bob", "Sagget");
-				TestBookTwo.addAnAuthor("John", "Jacob");
+				TestBookOne.addAnAuthor("Bob Sagget");
+				TestBookTwo.addAnAuthor("John Jacob");
 				System.out.println(ListOfBooks.listBookCollection());
 				
 				//Test to search ListOfBooks and display specified book

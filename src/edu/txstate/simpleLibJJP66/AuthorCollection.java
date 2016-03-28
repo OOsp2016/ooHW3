@@ -39,7 +39,7 @@ public class AuthorCollection implements Serializable {
 			// temporary author object to get First Name and Last name
 			Author TempAuthor = ListOfAuthors.get(i);
 			// adds Author list to string
-			AuthorName = AuthorName + TempAuthor.getFirstName() + " " + TempAuthor.getLastName() + "\n";
+			AuthorName = AuthorName + TempAuthor.getName() + "\n";
 		}
 
 		return AuthorName;
@@ -51,7 +51,7 @@ public class AuthorCollection implements Serializable {
 		String author = "";
 		for (int i = 0; i < ListOfAuthors.size(); i++) {
 			Author TempAuthor = ListOfAuthors.get(i);
-			author = TempAuthor.getFirstName() + " " + TempAuthor.getLastName();
+			author = TempAuthor.getName();
 			if (author.equals(input)) {
 				return true;
 			}

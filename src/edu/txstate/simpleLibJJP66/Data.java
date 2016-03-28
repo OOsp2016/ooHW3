@@ -59,20 +59,16 @@ public class Data {
 	static void CreateSampleObjects() {
 
 		// Make Book objects and add them to ListOfBooks
-		Book FirstBook = new Book("Factotum", "HarperCollins Publishers", "5/28/2002", "9780876852637", 20, "Charles",
-				"Bukowski");
+		Book FirstBook = new Book("Factotum", "HarperCollins Publishers", "5/28/2002", "9780876852637", 20, "Charles Bukowski");
 		ListOfBooks.addBook(FirstBook);
 		Book SecondBook = new Book("Catcher in the Rye", "Litte, Brown and Company", "5/01/1991", "0316769487", 20,
-				"J. D.", "Salinger");
+				"J. D. Salinger");
 		ListOfBooks.addBook(SecondBook);
-		Book ThirdBook = new Book("The Great Gatsby", "Scribner", "09/30/2004", "0743273567", 20, "F. Scott",
-				"Fitzgerald");
+		Book ThirdBook = new Book("The Great Gatsby", "Scribner", "09/30/2004", "0743273567", 20, "F. Scott Fitzgerald");
 		ListOfBooks.addBook(ThirdBook);
-		Book ForthBook = new Book("Battle Royale", "VIZ Media LLC", "02/26/2003", "156931778X", 20, "Koushun",
-				"Takami");
+		Book ForthBook = new Book("Battle Royale", "VIZ Media LLC", "02/26/2003", "156931778X", 20, "Koushun Takami");
 		ListOfBooks.addBook(ForthBook);
-		Book FifthBook = new Book("Redwall", "Puffin/Philomel Book", "09/30/2002", "0142302376", 20, "Brian",
-				"Jacques");
+		Book FifthBook = new Book("Redwall", "Puffin/Philomel Book", "09/30/2002", "0142302376", 20, "Brian Jacques");
 		ListOfBooks.addBook(FifthBook);
 		// end making Book Objects
 
@@ -185,7 +181,7 @@ public class Data {
 
 	private static void addBook() {
 		int copies;
-		String isbn, title, publisher, date, authorFirstName, authorLastName;
+		String isbn, title, publisher, date, authorName;
 
 		System.out.println("\nEnter title: ");
 		title = DataInput.nextLine();
@@ -203,12 +199,9 @@ public class Data {
 		copies = DataInput.nextInt();
 
 		System.out.println("\nEnter Author First Name: ");
-		authorFirstName = DataInput.nextLine();
+		authorName = DataInput.nextLine();
 
-		System.out.println("\nEnter Author First Name: ");
-		authorLastName = DataInput.nextLine();
-
-		Book addingBook = new Book(title, publisher, date, isbn, copies, authorFirstName, authorLastName);
+		Book addingBook = new Book(title, publisher, date, isbn, copies, authorName);
 		ListOfBooks.addBook(addingBook);
 
 	}

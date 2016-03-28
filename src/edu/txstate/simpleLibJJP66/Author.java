@@ -35,7 +35,7 @@ public class Author implements Serializable{
 	// Overrides equals function so object can be removed
 	@Override
 	public boolean equals(Object obj) {
-		return (this.FirstName.equals(((Author) obj).FirstName) && (this.LastName.equals(((Author) obj).LastName)));
+		return (this.name.equals(((Author) obj).name));
 
 	}
 
