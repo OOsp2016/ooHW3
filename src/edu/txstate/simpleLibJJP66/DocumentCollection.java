@@ -11,6 +11,8 @@ public class DocumentCollection implements Serializable{
 	private static final long serialVersionUID = 1667112761830378859L;
 	private static LinkedList<Document> linkedListOfDocuments;
 	
+	public DocumentSearch searchType;
+	
 	public DocumentCollection() {
 		linkedListOfDocuments = new LinkedList<Document>();
 	}
@@ -23,6 +25,10 @@ public class DocumentCollection implements Serializable{
 	// removes a book
 	public void removeBook(Document removeDocument) {
 		linkedListOfDocuments.remove(removeDocument);
+	}
+	
+	public void tryToSearch(){
+		searchType.search();
 	}
 
 
