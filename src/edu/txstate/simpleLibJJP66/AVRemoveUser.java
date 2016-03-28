@@ -2,8 +2,8 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class AVRemoveUser extends AdminView{
-	public static void aVRUMenu() {
+public class AVRemoveUser extends ConsoleWindow{
+	public void printMenu() {
 		System.out.println(
 		"\nEnter 1 to remove student" 
 		+ "\nEnter 2 to remove faculty member" 
@@ -11,11 +11,11 @@ public class AVRemoveUser extends AdminView{
 		+ "\nEnter 4 to exit.");
 	}
 	
-	public static void aVRUMenuChoice() {
+	public void aVRUMenuChoice() {
 		boolean running = true;	
 		while (running) {
 			// Call remove user menu method to display options
-			aVRUMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 				

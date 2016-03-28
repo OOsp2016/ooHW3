@@ -2,8 +2,8 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class AVListData extends AdminView{
-	public static void aVLDMenu() {
+public class AVListData extends ConsoleWindow{
+	public void printMenu() {
 		System.out.println(
 		"\nEnter 1 to list books" 
 		+ "\nEnter 2 to list journals" 
@@ -13,11 +13,11 @@ public class AVListData extends AdminView{
 		+ "\nEnter 6 to exit.");
 	}
 	
-	public static void aVLDMenuChoice() {
+	public void aVLDMenuChoice() {
 		boolean running = true;	
 		while (running) {
 			// Call list data menu method to display options
-			aVLDMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 				

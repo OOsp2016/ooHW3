@@ -2,8 +2,8 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.InputMismatchException;
 
-public class AVAddUser extends AdminView{
-	public static void aVAUMenu() {
+public class AVAddUser extends ConsoleWindow{
+	public void printMenu() {
 		System.out.println(
 		"\nEnter 1 to add a new student" 
 		+ "\nEnter 2 to add a new faculty member" 
@@ -11,11 +11,11 @@ public class AVAddUser extends AdminView{
 		+ "\nEnter 4 to exit.");
 	}
 	
-	public static void aVAUMenuChoice() {
+	public void aVAUMenuChoice() {
 		boolean running = true;	
 		while (running) {
 			// Call add user menu method to display options
-			aVAUMenu();
+			printMenu();
 			try {
 				int answer = in.nextInt();
 				
