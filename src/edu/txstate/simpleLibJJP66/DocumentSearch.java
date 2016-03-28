@@ -25,7 +25,7 @@ class SearchTitle implements DocumentSearch{
 				Document TempDocument = list.get(i);
 				// If statement to compare to title and publisher and author
 				if (TempDocument.getTitle().equals(searchInput)) {
-					//output = TempDocument.displayBook();
+					TempDocument.displayDocument();
 					System.out.println(output);
 					found = true;
 					// end if statement
@@ -34,7 +34,7 @@ class SearchTitle implements DocumentSearch{
 			}
 			// if statement to display if book not found
 			if (!found) {
-				System.out.println("Book not found!");
+				System.out.println("Document not found!");
 			}
 			search = false;
 		}
