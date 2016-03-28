@@ -8,15 +8,7 @@ public class Book extends Document {
 	private static final long serialVersionUID = -6106063684215068243L;
 
 	// Book variables
-	private String Title;
-
-	private String Publisher;
-
-	private String Date;
-
 	private String ISBN;
-
-	private int Copies;
 
 	// Array list of authors for object book
 	private AuthorCollection AuthorListForBook = null;
@@ -57,29 +49,6 @@ public class Book extends Document {
 	}
 
 	// Getters and Setters for the variables
-	public String getTitle() {
-		return Title;
-	}
-
-	public void setTitle(String title) {
-		this.Title = title;
-	}
-
-	public String getPublisher() {
-		return Publisher;
-	}
-
-	public void setPublisher(String publisher) {
-		this.Publisher = publisher;
-	}
-
-	public String getDate() {
-		return Date;
-	}
-
-	public void setDate(String date) {
-		this.Date = date;
-	}
 
 	public String getISBN() {
 		return ISBN;
@@ -88,20 +57,12 @@ public class Book extends Document {
 	public void setISBN(String iSBN) {
 		this.ISBN = iSBN;
 	}
-
-	public int getCopies() {
-		return Copies;
-	}
-
-	public void setCopies(int copies) {
-		this.Copies = copies;
-	}
 	// End getters and setters for variables
 
 	// displays book
 	public String displayBook() {
-		return "Title: " + Title + "\nPublisher: " + Publisher + "\nDate: " + Date + "\nISBN: " + ISBN + "\nCopies: "
-				+ Copies + "\nAuthor(s): " + getAuthors();
+		return "Title: " + title + "\nPublisher: " + publisher + "\nDate: " + date + "\nISBN: " + ISBN + "\nCopies: "
+				+ copies + "\nAuthor(s): " + getAuthors();
 	}
 
 	// Gets list of authors
@@ -130,15 +91,5 @@ public class Book extends Document {
 		return AuthorListForBook.searchAuthors(input);
 	}
 
-	public void updateBorrow() {
-		Copies -= 1;
-		
-	}
-
-	public void updateReturn() {
-		Copies +=1;
-		
-	}
-
-	// end class
+// end class
 }

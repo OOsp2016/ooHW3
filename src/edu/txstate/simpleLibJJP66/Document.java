@@ -8,10 +8,10 @@ public class Document implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -3566245322477258678L;
-	private String title;
-	private String publisher;
-	private String date;
-	private int copies;
+	protected String title;
+	protected String publisher;
+	protected String date;
+	protected int copies;
 	
 	public DocumentSearch searchType;
 	

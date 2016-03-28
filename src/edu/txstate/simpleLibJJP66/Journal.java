@@ -8,17 +8,9 @@ public class Journal extends Document{
 	private static final long serialVersionUID = -249610661948403768L;
 
 	// Journal variables
-	private String Title;
-
-	private String Date;
-
 	private int Volume;
 
 	private int Issue;
-	
-	private String Publisher;
-
-	private int Copies;
 
 	// Array list of articles for object Journal
 	private ArticleCollection ArticleListForJournal = null;
@@ -60,22 +52,6 @@ public class Journal extends Document{
 	}
 
 	// Getters and Setters for the variables
-	public String getTitle() {
-		return Title;
-	}
-
-	public void setTitle(String title) {
-		this.Title = title;
-	}
-	
-	public String getDate() {
-		return Date;
-	}
-
-	public void setDate(String date) {
-		this.Date = date;
-	}
-	
 	public int getVolume(){
 		return Volume;
 	}
@@ -92,27 +68,12 @@ public class Journal extends Document{
 		this.Issue = issue;
 	}
 
-	public String getPublisher() {
-		return Publisher;
-	}
-
-	public void setPublisher(String publisher) {
-		this.Publisher = publisher;
-	}
-
-	public int getCopies() {
-		return Copies;
-	}
-
-	public void setCopies(int copies) {
-		this.Copies = copies;
-	}
 	// End getters and setters for variables
 
 	// displays journal
 	public String displayJournal() {
-		return "Title: " + Title + "\nPublisherDate: " + Date + "\nVolume: " + Volume + "\nIssue: " + Issue + "\nPublisher: "
-				+ Publisher + "Copies: " + Copies + "\nArticle(s): " + getArticles();
+		return "Title: " + title + "\nPublisherDate: " + date + "\nVolume: " + Volume + "\nIssue: " + Issue + "\nPublisher: "
+				+ publisher + "Copies: " + copies + "\nArticle(s): " + getArticles();
 	}
 
 	// Gets list of articles
@@ -138,17 +99,6 @@ public class Journal extends Document{
 	public Boolean findArticle(String input) {
 		return ArticleListForJournal.searchArticles(input);
 	}
-	
-	public void updateBorrow() {
-		Copies -= 1;
-		
-	}
-	public void updateReturn() {
-		Copies += 1;
-		
-	}
-
-
 
 	// end class
 }
