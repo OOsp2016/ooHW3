@@ -108,8 +108,8 @@ public class BookCollection extends DocumentCollection implements Serializable {
 			return returnedBook;
 	}
 	
-	public static void tryToSearch(String input, BookCollection listOfBooks){
-		searchType.search(input, listOfBooks);
+	public static void tryToSearch(String input){
+		searchType.search(input, ListOfBooks);
 	}
 
 	// end class

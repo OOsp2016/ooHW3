@@ -55,7 +55,7 @@ public class UVSearch extends ConsoleWindow{
 		String input = "nothing";
 		System.out.println("\nEnter Title of Book to search for: ");
 		input = in.nextLine();
-		BookCollection.tryToSearch(input, Data.ListOfBooks);
+		BookCollection.tryToSearch(input);
 	}	
 	
 
