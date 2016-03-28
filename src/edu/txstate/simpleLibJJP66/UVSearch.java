@@ -23,13 +23,16 @@ public class UVSearch extends UserView{
 				
 				case 1:
 					// Searches for a book
+					System.out.println("\nBook search initiated.");
 					searchBooks();
 					break;
 				case 2:
 					// searches for a journal
+					System.out.println("\nJournal search initiated.");
 					searchJournals();
 					break;
 				case 3:
+					System.out.println("\n Exiting search menu...");
 					searching = false;
 					break;
 				default:

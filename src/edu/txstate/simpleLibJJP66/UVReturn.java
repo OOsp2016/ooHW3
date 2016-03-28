@@ -23,10 +23,12 @@ public class UVReturn extends UserView{
 
 				switch (answer) {
 				case 0:
+					System.out.println("\nExiting return menu...");
 					returning = false;
 					break;
 				case 1:
 					// returns book
+					System.out.println("\nAccepting book.");
 					book = returnBook();
 					/*if (book != null) {
 						// if the book is found then the transaction is removed
@@ -41,6 +43,7 @@ public class UVReturn extends UserView{
 					break;
 				case 2:
 					// same as above but for journal
+					System.out.println("\nAccepting journal.");
 					book = returnJournal();
 					/*if (book != null) {
 						trans.removeTransaction(currentUser, book);

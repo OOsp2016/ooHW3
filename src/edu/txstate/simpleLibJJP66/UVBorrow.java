@@ -22,19 +22,21 @@ public class UVBorrow extends UserView{
 
 				case 1:
 					// borrows a book for the user
+					System.out.println("\nLending book.");
 					borrowBook();
 					break;
 				case 2:
 					// same as above but for journal
+					System.out.println("\nLending journal.");
 					borrowJournal();
 					break;
 				case 3:
 					// breaks loop and goes back to previous menu
+					System.out.println("\nExiting borrow menu...");
 					borrowing = false;
 					break;
 				default:
-					System.err
-							.println("Please select a number between 1 and 3.");
+					System.err.println("Please select a number between 1 and 3.");
 				}
 			} catch (InputMismatchException ex) {
 				System.err.println("Input missmatch. Please Try again." + ex);
