@@ -48,14 +48,38 @@ public class AVAddUser extends ConsoleWindow{
 	}
 	
 	public static void addStudent() {
-		// Add new student
-		System.out.println("\nEntered addStudent()");
-		Data.addStudent();
+		// adds a student by info.
+		String name, ID;
+		int copies;
+
+		System.out.println("\nEnter Name: ");
+		name = DataInput.nextLine();
+
+		System.out.println("\nEnter ID: ");
+		ID = DataInput.nextLine();
+
+		System.out.println("\nEnter Copies: ");
+		copies = DataInput.nextInt();
+
+		Student addingStudent = new Student(name, ID, copies);
+		Data.ListOfStudents.addStudent(addingStudent);
 	}
-	
+
 	public static void addFaculty() {
-		// Add new faculty
-		System.out.println("\nEntered addFaculty()");
-		Data.addFaculty();
+		// same as above method but for faculty
+		String name, ID;
+		int copies;
+
+		System.out.println("\nEnter Name: ");
+		name = DataInput2.nextLine();
+
+		System.out.println("\nEnter ID: ");
+		ID = DataInput2.nextLine();
+
+		System.out.println("\nEnter Copies: ");
+		copies = DataInput2.nextInt();
+
+		Faculty addingFaculty = new Faculty(name, ID, copies);
+		Data.ListOfFaculty.addFaculty(addingFaculty);
 	}
 }

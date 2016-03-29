@@ -155,16 +155,16 @@ public class Data {
 					adding = false;
 					break;
 				case 1:
-					addBook();
+					//addBook();
 					break;
 				case 2:
-					addJournal();
+					//addJournal();
 					break;
 				case 3:
-					addStudent();
+					//addStudent();
 					break;
 				case 4:
-					addFaculty();
+					//addFaculty();
 					break;
 				default:
 					System.err.println("Please select a number between 0 and 4.");
@@ -181,98 +181,8 @@ public class Data {
 		}
 	}
 
-	public static void addBook() {
-		int copies;
-		String isbn, title, publisher, date, authorName;
 
-		System.out.println("\nEnter title: ");
-		title = DataInput.nextLine();
 
-		System.out.println("\nEnter Publisher: ");
-		publisher = DataInput.nextLine();
-
-		System.out.println("\nEnter Date: ");
-		date = DataInput.nextLine();
-
-		System.out.println("\nEnter ISBN: ");
-		isbn = DataInput.nextLine();
-
-		System.out.println("\nEnter Copies: ");
-		copies = DataInput.nextInt();
-
-		System.out.println("\nEnter Author First Name: ");
-		authorName = DataInput.nextLine();
-
-		Book addingBook = new Book(title, publisher, date, isbn, copies, authorName);
-		ListOfBooks.addBook(addingBook);
-
-	}
-
-	public static void addJournal() {
-		// this method allows the user to enter information for journal
-		String title, publisherDate, publisher, article;
-		int copies, volume, issue;
-
-		System.out.println("\nEnter Title: ");
-		title = DataInput.nextLine();
-
-		System.out.println("\nEnter Publisher Date: ");
-		publisherDate = DataInput.nextLine();
-
-		System.out.println("\nEnter Volume: ");
-		volume = DataInput.nextInt();
-
-		System.out.println("\nEnter Issue: ");
-		issue = DataInput.nextInt();
-
-		System.out.println("\nEnter Copies: ");
-		copies = DataInput.nextInt();
-
-		System.out.println("\nEnter Publisher: ");
-		publisher = DataInput.nextLine();
-
-		System.out.println("\nEnter Article: ");
-		article = DataInput.nextLine();
-
-		Journal addingJournal = new Journal(title, publisherDate, volume, issue, publisher, copies, article);
-		ListOfJournals.addJournal(addingJournal);
-	}
-
-	public static void addStudent() {
-		// adds a student by info.
-		String name, ID;
-		int copies;
-
-		System.out.println("\nEnter Name: ");
-		name = DataInput.nextLine();
-
-		System.out.println("\nEnter ID: ");
-		ID = DataInput.nextLine();
-
-		System.out.println("\nEnter Copies: ");
-		copies = DataInput.nextInt();
-
-		Student addingStudent = new Student(name, ID, copies);
-		ListOfStudents.addStudent(addingStudent);
-	}
-
-	public static void addFaculty() {
-		// same as above method but for faculty
-		String name, ID;
-		int copies;
-
-		System.out.println("\nEnter Name: ");
-		name = DataInput2.nextLine();
-
-		System.out.println("\nEnter ID: ");
-		ID = DataInput2.nextLine();
-
-		System.out.println("\nEnter Copies: ");
-		copies = DataInput2.nextInt();
-
-		Faculty addingFaculty = new Faculty(name, ID, copies);
-		ListOfFaculty.addFaculty(addingFaculty);
-	}
 	
 	public static void listData() {
 		Boolean listing = true;
@@ -307,11 +217,6 @@ public class Data {
 				System.out.println(ListOfTransactions.toString());
 			}
 		}
-	}
-
-	public static void searchLists() {
-		// TODO Auto-generated method stub
-
 	}
 
 	public static void borrowItem(String currentUser, int userType) {
