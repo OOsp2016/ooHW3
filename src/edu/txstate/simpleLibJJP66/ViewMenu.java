@@ -6,6 +6,7 @@ public class ViewMenu extends ConsoleWindow {
 
 	//static Scanner in = new Scanner(System.in);
 	
+	//top menu for user selections
 	protected void printMenu(){
 		System.out.println(
 				"\n1. Switch to user view. \n"
@@ -14,9 +15,11 @@ public class ViewMenu extends ConsoleWindow {
 				+ "4. Exit program.");
 	}
 	
+	//begins the program with the top menu
 	public void start() {
 		Data.LoadData();
 		
+		//generation of the menu objects
 		UserView UV = new UserView();
 		LibrarianView LV = new LibrarianView();
 		AdminView AV = new AdminView();

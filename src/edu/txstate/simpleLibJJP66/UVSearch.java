@@ -65,10 +65,6 @@ public class UVSearch extends ConsoleWindow{
 		System.out.println("\nEnter title of journal to search for: ");
 		input = search.nextLine();
 		Data.ListOfJournals.searchJournals(input);
-
-		//System.out.println("\nEnter Title to search for: ");
-		//input = in.nextLine();
-		//jour.searchJournals(input);
 	}
 
 }

@@ -13,6 +13,7 @@ public class UserView extends ConsoleWindow {
 	}
 
 	public void uVMenuChoice() {
+		//create more menu objects
 		UVSearch UVS = new UVSearch();
 		UVBorrow UVB = new UVBorrow();
 		UVReturn UVR = new UVReturn();

@@ -60,7 +60,6 @@ public class AVRemoveUser extends ConsoleWindow{
 		System.out.println("\nEnter ID: ");
 		ID = remove.nextLine();
 
-		//Student s = new Student(name, ID, copies);
 		Data.ListOfStudents.removeStudent(name, ID);
 	}
 	
@@ -76,8 +75,6 @@ public class AVRemoveUser extends ConsoleWindow{
 		System.out.println("\nEnter ID: ");
 		ID = delete.nextLine();
 
-
-		//Faculty f = new Faculty(name, ID, copies);
 		Data.ListOfFaculty.removeFaculty(name, ID);
 	}
 	
