@@ -62,20 +62,28 @@ public class AVListData extends ConsoleWindow{
 	public static void listBooks() {
 		// List books
 		System.out.println("\nEntered listBooks()");
+		
+		System.out.println(Data.ListOfBooks.listBookCollection());
 	}
 	
 	public static void listJournals() {
 		// List journals
 		System.out.println("\nEntered listJournals()");
+		
+		System.out.println(Data.ListOfJournals.listJournalCollection());
 	}
 	
 	public static void listStudents() {
 		// List students
 		System.out.println("\nEntered listStudents()");
+		
+		System.out.println(Data.ListOfStudents.toString());
 	}
 	
 	public static void listFaculty() {
 		// List faculty
 		System.out.println("\nEntered listFaculty()");
+		
+		System.out.println(Data.ListOfFaculty.toString());
 	}
 }

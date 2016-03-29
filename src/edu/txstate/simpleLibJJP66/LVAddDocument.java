@@ -50,10 +50,13 @@ public class LVAddDocument extends ConsoleWindow{
 	public void addBook() {
 		// Add book
 		System.out.println("\nEntered addBook()");
+		Data.addBook();
+		
 	}
 	
 	public void addJournal() {
 		// Add journal
 		System.out.println("\nEntered addJournal()");
+		Data.addJournal();
 	}
 }

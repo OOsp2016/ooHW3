@@ -50,10 +50,12 @@ public class AVAddUser extends ConsoleWindow{
 	public static void addStudent() {
 		// Add new student
 		System.out.println("\nEntered addStudent()");
+		Data.addStudent();
 	}
 	
 	public static void addFaculty() {
 		// Add new faculty
 		System.out.println("\nEntered addFaculty()");
+		Data.addFaculty();
 	}
 }

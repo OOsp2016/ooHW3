@@ -50,15 +50,42 @@ public class AVRemoveUser extends ConsoleWindow{
 	public static void removeStudent() {
 		// Remove new student
 		System.out.println("\nEntered removeStudent()");
+		
+		// adds a student by info.
+		String name, ID;
+		int copies;
+
+		System.out.println("\nEnter Name: ");
+		name = remove.nextLine();
+
+		System.out.println("\nEnter ID: ");
+		ID = remove.nextLine();
+
+		System.out.println("\nEnter Copies: ");
+		copies = remove.nextInt();
+
+		//Student s = new Student(name, ID, copies);
+		Data.ListOfStudents.removeStudent(name, ID, copies);
 	}
 	
 	public static void removeFaculty() {
 		// Remove new faculty
 		System.out.println("\nEntered removeFaculty()");
+		
+		String name, ID;
+		int copies;
+
+		System.out.println("\nEnter Name: ");
+		name = delete.nextLine();
+
+		System.out.println("\nEnter ID: ");
+		ID = delete.nextLine();
+
+		System.out.println("\nEnter Copies: ");
+		copies = delete.nextInt();
+
+		//Faculty f = new Faculty(name, ID, copies);
+		Data.ListOfFaculty.removeFaculty(name, ID, copies);
 	}
 	
-	public static void removeStaff() {
-		// Remove new staff
-		System.out.println("\nEntered removeStaff()");
-	}
 }

@@ -179,7 +179,7 @@ public class Data {
 		}
 	}
 
-	private static void addBook() {
+	public static void addBook() {
 		int copies;
 		String isbn, title, publisher, date, authorName;
 
@@ -206,7 +206,7 @@ public class Data {
 
 	}
 
-	private static void addJournal() {
+	public static void addJournal() {
 		// this method allows the user to enter information for journal
 		String title, publisherDate, publisher, article;
 		int copies, volume, issue;
@@ -236,7 +236,7 @@ public class Data {
 		ListOfJournals.addJournal(addingJournal);
 	}
 
-	private static void addStudent() {
+	public static void addStudent() {
 		// adds a student by info.
 		String name, ID;
 		int copies;
@@ -254,7 +254,7 @@ public class Data {
 		ListOfStudents.addStudent(addingStudent);
 	}
 
-	private static void addFaculty() {
+	public static void addFaculty() {
 		// same as above method but for faculty
 		String name, ID;
 		int copies;
@@ -271,7 +271,7 @@ public class Data {
 		Faculty addingFaculty = new Faculty(name, ID, copies);
 		ListOfFaculty.addFaculty(addingFaculty);
 	}
-
+	
 	public static void listData() {
 		Boolean listing = true;
 		while (listing) {
