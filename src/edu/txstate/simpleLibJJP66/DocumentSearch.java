@@ -2,6 +2,8 @@ package edu.txstate.simpleLibJJP66;
 
 import java.util.LinkedList;
 
+//failed implementation of strategy pattern. 
+
 public interface DocumentSearch {
 
 	void search(String input);

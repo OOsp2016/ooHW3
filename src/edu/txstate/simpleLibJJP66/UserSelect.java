@@ -50,7 +50,8 @@ public class UserSelect extends ConsoleWindow{
 		}
 		return pickUser;
 	}
-		
+	
+	// This shows the list of students and allows the user to pick whom to borrow for
 		private static String chooseStudent() {
 			while (currentUser == "") {
 				String input = "empty";
@@ -66,8 +67,7 @@ public class UserSelect extends ConsoleWindow{
 			return currentUser;
 		}
 
-		// This shows the list of Faculty and allows the user to pick whom to use
-		// the system for.
+		// This shows the list of Faculty and allows the user to pick whom to borrow for
 		private static String chooseFaculty() {
 			currentUser = "wrong";
 			while (currentUser == "wrong") {
