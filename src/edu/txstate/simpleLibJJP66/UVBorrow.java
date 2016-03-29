@@ -51,28 +51,34 @@ public class UVBorrow extends ConsoleWindow{
 
 	private static void borrowBook() {
 		// allows the user to choose what book to borrow
+		String currentUser = "";
+		currentUser = UserSelect.userChoiceMenu();
 		System.out.println("\nEntered borrowBook()");
 		String borrow;
 		String bookTransaction = "nothing";
-		//while (bookTransaction == "nothing") {
-			//System.out.println("\nEnter title of book to borrow: \n");
-			//borrow= in.nextLine();
-			//bookTransaction = lib.Borrow(borrow);
-		//}
-		//return bookTransaction;
+		while (bookTransaction == "nothing") {
+			System.out.println("\nEnter title of book to borrow: \n");
+			borrow= in.nextLine();
+			bookTransaction = Data.ListOfBooks.Borrow(borrow);
+		}
+		Transaction t = new Transaction (currentUser, bookTransaction, userType);
+		Data.ListOfTransactions.addTransaction(t);
 	}
 
 	private static void borrowJournal() {
 		//allows the user to choose what journal to borrow
+		String currentUser = "";
+		currentUser = UserSelect.userChoiceMenu();
 		System.out.println("\nEntered borrowJournal()");
 		String bookTransaction = "nothing";
 		String borrow;
-		//while (bookTransaction == "nothing") {
-	//		System.out.println("\nEnter title of journal to borrow: \n");
-	//		borrow = in.nextLine();
-			//bookTransaction = jour.Borrow(borrow);
-	//	}
-		//return bookTransaction;
+		while (bookTransaction == "nothing") {
+			System.out.println("\nEnter title of journal to borrow: \n");
+			borrow = in.nextLine();
+			bookTransaction = Data.ListOfJournals.Borrow(borrow);
+		}
+		Transaction t = new Transaction (currentUser, bookTransaction, userType);
+		Data.ListOfTransactions.addTransaction(t);
 	}
 	
 	

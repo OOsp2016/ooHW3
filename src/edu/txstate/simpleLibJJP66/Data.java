@@ -219,7 +219,7 @@ public class Data {
 		}
 	}
 
-	public static void borrowItem(String currentUser, int userType) {
+/*	public static void borrowItem(String currentUser, int userType) {
 		// this method lets the user borrow an item
 		String book = "";
 		Boolean borrowing = true;
@@ -264,7 +264,7 @@ public class Data {
 			}
 		}
 
-	}
+	}*/
 
 	private static String borrowBook() {
 		// allows the user to choose what book to borrow
@@ -291,6 +291,7 @@ public class Data {
 		return bookTransaction;
 	}
 
+	/*
 	public static void returnItem(String currentUser, int userType) {
 		// This method returns an item.
 		String book = "";
@@ -334,7 +335,7 @@ public class Data {
 		}
 
 	}
-
+*/
 	private static String returnBook() {
 		// TODO Auto-generated method stub
 		// this allows the user to choose what book to return

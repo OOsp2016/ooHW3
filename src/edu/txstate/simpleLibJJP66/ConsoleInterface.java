@@ -65,15 +65,15 @@ public class ConsoleInterface {
 					break;
 				case 4:
 					// brings you to search list menu
-					Data.searchLists();
+					//Data.searchLists();
 					break;
 				case 5:
 					// brings you to borrow item menu
-					Data.borrowItem(CurrentUser, UserType);
+					//Data.borrowItem(CurrentUser, UserType);
 					break;
 				case 6:
 					// brings you to return item menu
-					Data.returnItem(CurrentUser, UserType);
+					//Data.returnItem(CurrentUser, UserType);
 				default:
 					System.err.println("Please select a number between 1 and 6.");
 				}

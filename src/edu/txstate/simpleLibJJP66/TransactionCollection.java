@@ -20,15 +20,20 @@ public class TransactionCollection implements Serializable{
 		record.add(newTransaction);
 	}
 	//removes a transaction from the list
-	public void removeTransaction(String user, String item){
+	public int removeTransaction(String user, String item){
+		int uType = 3;
 		for (int i = 0; i < record.size(); i++) {
 			Transaction t = record.get(i);
 			if (t.getUser().equals(user)&&t.getBook().equals(item)) {
 				record.remove(i);
+				uType = t.getUserType();
 			}
 		}
 		
+		return uType;
+		
 	}
+	
 	//printing format
 	@Override
 	public String toString() {

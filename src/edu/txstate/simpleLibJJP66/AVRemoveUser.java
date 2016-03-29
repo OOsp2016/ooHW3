@@ -53,7 +53,6 @@ public class AVRemoveUser extends ConsoleWindow{
 		
 		// adds a student by info.
 		String name, ID;
-		int copies;
 
 		System.out.println("\nEnter Name: ");
 		name = remove.nextLine();
@@ -70,7 +69,6 @@ public class AVRemoveUser extends ConsoleWindow{
 		System.out.println("\nEntered removeFaculty()");
 		
 		String name, ID;
-		int copies;
 
 		System.out.println("\nEnter Name: ");
 		name = delete.nextLine();

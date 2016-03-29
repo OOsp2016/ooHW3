@@ -5,7 +5,6 @@ import java.util.InputMismatchException;
 public class UserSelect extends ConsoleWindow{
 	
 	private static String currentUser = "";
-	private static int UserType;
 
 	public void printMenu(){
 		System.out.println("\nChoose User: " 
@@ -13,9 +12,11 @@ public class UserSelect extends ConsoleWindow{
 					+ "\nEnter 2 for Faculty");
 	}
 	
-	public void userChoiceMenu() {
+	public static String userChoiceMenu() {
 		// This function allows the user to choose whom they are altering
 		Boolean Choosing = true;
+		
+		String pickUser = "";
 
 		// while the user is choosing, allow user to determine to search through
 		// list of
@@ -26,12 +27,12 @@ public class UserSelect extends ConsoleWindow{
 				int choice = InputForUser.nextInt();
 				switch (choice) {
 				case 1:
-					chooseStudent();
-					UserType = 0;
+					pickUser = chooseStudent();
+					userType = 0;
 					break;
 				case 2:
-					chooseFaculty();
-					UserType = 1;
+					pickUser = chooseFaculty();
+					userType = 1;
 					break;
 				default:
 					System.err.println("Please select a number between 1 and 2.");
@@ -47,9 +48,10 @@ public class UserSelect extends ConsoleWindow{
 			}
 			Choosing = false;
 		}
+		return pickUser;
 	}
 		
-		private static void chooseStudent() {
+		private static String chooseStudent() {
 			while (currentUser == "") {
 				String input = "empty";
 				System.out.println(Data.ListOfStudents.toString());
@@ -61,11 +63,12 @@ public class UserSelect extends ConsoleWindow{
 				}
 			}
 			System.out.println("did pick function");
+			return currentUser;
 		}
 
 		// This shows the list of Faculty and allows the user to pick whom to use
 		// the system for.
-		private static void chooseFaculty() {
+		private static String chooseFaculty() {
 			currentUser = "wrong";
 			while (currentUser == "wrong") {
 				String input = "empty";
@@ -78,5 +81,6 @@ public class UserSelect extends ConsoleWindow{
 					System.out.println("\nStudent not found! Please enter a valid user name.");
 				}
 			}
+			return currentUser;
 		}
 }

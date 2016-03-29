@@ -30,7 +30,7 @@ public class LibrarianView extends ConsoleWindow{
 				case 2:
 					// Prints transaction list
 					System.out.println("\nPrinting out transaction list.");
-					//System.out.println(Backend.trans.toString());
+					System.out.println(Data.ListOfTransactions.toString());
 					break;
 				case 3:
 					// Exit

@@ -13,6 +13,7 @@ public class UVReturn extends ConsoleWindow{
 	public void uVReturnMenuChoice(){
 		// This method returns an item.
 		String book = "";
+		String currentUser = "";
 		Boolean returning = true;
 		// while loop for return options
 		while (returning) {
@@ -24,29 +25,33 @@ public class UVReturn extends ConsoleWindow{
 				case 1:
 					// returns book
 					System.out.println("\nAccepting book.");
+					currentUser = UserSelect.userChoiceMenu();
 					book = returnBook();
-					/*if (book != null) {
+					if (book != null) {
 						// if the book is found then the transaction is removed
-						trans.removeTransaction(currentUser, book);
+						userType = Data.ListOfTransactions.removeTransaction(currentUser, book);
+
 						if (userType == 0) {
 							// updates the copies
-							stu.updateReturn(currentUser);
+							Data.ListOfStudents.updateReturn(currentUser);
 						} else
 							// updates the copies
-							fac.updateReturn(currentUser);
-					}*/
+							Data.ListOfFaculty.updateReturn(currentUser);
+					}
 					break;
 				case 2:
 					// same as above but for journal
 					System.out.println("\nAccepting journal.");
+					currentUser = UserSelect.userChoiceMenu();
 					book = returnJournal();
-					/*if (book != null) {
-						trans.removeTransaction(currentUser, book);
+					if (book != null) {
+						userType = Data.ListOfTransactions.removeTransaction(currentUser, book);
+						
 						if (userType == 0) {
-							stu.updateReturn(currentUser);
+							Data.ListOfStudents.updateReturn(currentUser);
 						} else
-							fac.updateReturn(currentUser);
-					}*/
+							Data.ListOfFaculty.updateReturn(currentUser);
+					}
 					break;
 				case 3:
 					System.out.println("\nExiting return menu...");
@@ -71,11 +76,11 @@ public class UVReturn extends ConsoleWindow{
 		//this allows the user to choose what book to return
 		System.out.println("\nEntered returnBook()");
 		String bookTransaction = null;
-		//while (bookTransaction == null) {
-			//System.out.println("\nEnter title of book to return: \n");
-		//String returnItem = in.nextLine();
-			//bookTransaction = lib.Return(returnItem);
-		//}
+		while (bookTransaction == null) {
+			System.out.println("\nEnter title of book to return: \n");
+		String returnItem = in.nextLine();
+			bookTransaction = Data.ListOfBooks.returnBook(returnItem);
+		}
 		return bookTransaction;
 	}
 
@@ -83,11 +88,11 @@ public class UVReturn extends ConsoleWindow{
 		//this allows the user to choose what journal to return
 		System.out.println("\nEntered returnJournal()");
 		String bookTransaction = null;
-		//while (bookTransaction == null) {
-			//System.out.println("\nEnter title of journal to return: \n");
-			//String returnItem = in.nextLine();
-			//bookTransaction = jour.Return(returnItem);
-		//}
+		while (bookTransaction == null) {
+			System.out.println("\nEnter title of journal to return: \n");
+			String returnItem = in.nextLine();
+			bookTransaction = Data.ListOfJournals.returnJournal(returnItem);
+		}
 		return bookTransaction;
 	}
 }
