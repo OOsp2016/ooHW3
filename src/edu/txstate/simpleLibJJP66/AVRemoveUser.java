@@ -61,11 +61,8 @@ public class AVRemoveUser extends ConsoleWindow{
 		System.out.println("\nEnter ID: ");
 		ID = remove.nextLine();
 
-		System.out.println("\nEnter Copies: ");
-		copies = remove.nextInt();
-
 		//Student s = new Student(name, ID, copies);
-		Data.ListOfStudents.removeStudent(name, ID, copies);
+		Data.ListOfStudents.removeStudent(name, ID);
 	}
 	
 	public static void removeFaculty() {
@@ -81,11 +78,9 @@ public class AVRemoveUser extends ConsoleWindow{
 		System.out.println("\nEnter ID: ");
 		ID = delete.nextLine();
 
-		System.out.println("\nEnter Copies: ");
-		copies = delete.nextInt();
 
 		//Faculty f = new Faculty(name, ID, copies);
-		Data.ListOfFaculty.removeFaculty(name, ID, copies);
+		Data.ListOfFaculty.removeFaculty(name, ID);
 	}
 	
 }

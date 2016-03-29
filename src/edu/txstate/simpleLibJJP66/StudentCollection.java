@@ -21,11 +21,11 @@ public class StudentCollection implements Serializable {
 		students.add(newStudent);
 	}
 
-	public void removeStudent(String name, String ID, int copies) {
+	public void removeStudent(String name, String ID) {
 		// TODO Auto-generated method stub
 			for (int i = 0; i < students.size(); i++) {
 				Student t = students.get(i);
-				if (t.getName().equals(name) && t.getID().equals(ID) && t.getCopies() == copies) {
+				if (t.getName().equals(name) && t.getID().equals(ID)) {
 					students.remove(i);
 				}
 			}

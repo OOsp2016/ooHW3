@@ -20,11 +20,11 @@ public class FacultyCollection implements Serializable {
 		members.add(newFaculty);
 	}
 	
-	public void removeFaculty(String name, String ID, int copies) {
+	public void removeFaculty(String name, String ID) {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < members.size(); i++) {
 			Faculty t = members.get(i);
-			if (t.getName().equals(name) && t.getID().equals(ID) && t.getCopies() == copies) {
+			if (t.getName().equals(name) && t.getID().equals(ID)) {
 				members.remove(i);
 			}
 		}	}

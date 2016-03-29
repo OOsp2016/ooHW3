@@ -59,15 +59,15 @@ public class LVAddDocument extends ConsoleWindow{
 
 		System.out.println("\nEnter Date: ");
 		date = bookInput.nextLine();
-
+		
 		System.out.println("\nEnter ISBN: ");
 		isbn = bookInput.nextLine();
-
+		
 		System.out.println("\nEnter Copies: ");
 		copies = bookInput.nextInt();
-		bookInput.hasNextLine();
+		bookInput.nextLine();
 
-		System.out.println("\nEnter Author First Name: ");
+		System.out.println("\nEnter Author Name: ");
 		authorName = bookInput.nextLine();
 
 		Book addingBook = new Book(title, publisher, date, isbn, copies, authorName);
