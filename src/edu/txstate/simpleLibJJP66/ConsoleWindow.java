@@ -14,6 +14,8 @@ public abstract class ConsoleWindow {
 	protected static Scanner journalInput = new Scanner (System.in);
 	protected static Scanner DataInput = new Scanner(System.in);
 	protected static Scanner DataInput2 = new Scanner(System.in);
+	protected static Scanner DataInput3 = new Scanner(System.in);
+	protected static Scanner DataInput4 = new Scanner(System.in);
 	
 	static int userType = 0;
 	

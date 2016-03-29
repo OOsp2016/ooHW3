@@ -58,7 +58,7 @@ public class UVBorrow extends ConsoleWindow{
 		String bookTransaction = "nothing";
 		while (bookTransaction == "nothing") {
 			System.out.println("\nEnter title of book to borrow: \n");
-			borrow= in.nextLine();
+			borrow= DataInput3.nextLine();
 			bookTransaction = Data.ListOfBooks.Borrow(borrow);
 		}
 		Transaction t = new Transaction (currentUser, bookTransaction, userType);
@@ -74,7 +74,7 @@ public class UVBorrow extends ConsoleWindow{
 		String borrow;
 		while (bookTransaction == "nothing") {
 			System.out.println("\nEnter title of journal to borrow: \n");
-			borrow = in.nextLine();
+			borrow = DataInput4.nextLine();
 			bookTransaction = Data.ListOfJournals.Borrow(borrow);
 		}
 		Transaction t = new Transaction (currentUser, bookTransaction, userType);
