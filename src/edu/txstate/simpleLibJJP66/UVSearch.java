@@ -53,7 +53,7 @@ public class UVSearch extends ConsoleWindow{
 	private void searchBook() {
 		System.out.println("\nEntered searchBooks()");
 		String input = "nothing";
-		System.out.println("\nEnter Title of Book to search for: ");
+		System.out.println("\nEnter title of book to search for: ");
 		input = search.nextLine();
 		Data.ListOfBooks.searchBooks(input);
 	}	
@@ -62,6 +62,9 @@ public class UVSearch extends ConsoleWindow{
 	private void searchJournal() {
 		System.out.println("\nEntered searchJournals()");
 		String input = "nothing";
+		System.out.println("\nEnter title of journal to search for: ");
+		input = search.nextLine();
+		Data.ListOfJournals.searchJournals(input);
 
 		//System.out.println("\nEnter Title to search for: ");
 		//input = in.nextLine();
