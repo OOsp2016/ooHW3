@@ -65,6 +65,7 @@ public class LVAddDocument extends ConsoleWindow{
 
 		System.out.println("\nEnter Copies: ");
 		copies = bookInput.nextInt();
+		bookInput.hasNextLine();
 
 		System.out.println("\nEnter Author First Name: ");
 		authorName = bookInput.nextLine();
@@ -93,6 +94,7 @@ public class LVAddDocument extends ConsoleWindow{
 
 		System.out.println("\nEnter Copies: ");
 		copies = journalInput.nextInt();
+		journalInput.nextLine();
 
 		System.out.println("\nEnter Publisher: ");
 		publisher = journalInput.nextLine();
