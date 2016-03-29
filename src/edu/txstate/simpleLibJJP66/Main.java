@@ -5,8 +5,10 @@ package edu.txstate.simpleLibJJP66;
  * @author Julius Jesus Perez
  * @author Keith Andrew Baize
  *
- *This program compiles and runs successfully.
- *No errors have been found by the developers thus far.
+ *This program simulates a library management
+ *system. It is designed using various design
+ *patterns.
+ *
  */
 
 public class Main {
