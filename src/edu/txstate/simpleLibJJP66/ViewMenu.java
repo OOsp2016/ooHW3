@@ -45,6 +45,7 @@ public class ViewMenu extends ConsoleWindow {
 				case 4:
 					//saveAndQuit();
 					System.out.println("\nExiting program...");
+					Data.saveAndQuit();
 					exitProgram = true;
 					break;
 				default:
