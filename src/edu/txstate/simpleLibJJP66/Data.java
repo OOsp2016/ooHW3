@@ -13,6 +13,8 @@ import java.util.Scanner;
 public class Data {
 
 	static Scanner DataInput = new Scanner(System.in);
+	static Scanner DataInput2 = new Scanner(System.in);
+
 
 	static BookCollection ListOfBooks = new BookCollection();
 	static JournalCollection ListOfJournals = new JournalCollection();
@@ -260,13 +262,13 @@ public class Data {
 		int copies;
 
 		System.out.println("\nEnter Name: ");
-		name = DataInput.nextLine();
+		name = DataInput2.nextLine();
 
 		System.out.println("\nEnter ID: ");
-		ID = DataInput.nextLine();
+		ID = DataInput2.nextLine();
 
 		System.out.println("\nEnter Copies: ");
-		copies = DataInput.nextInt();
+		copies = DataInput2.nextInt();
 
 		Faculty addingFaculty = new Faculty(name, ID, copies);
 		ListOfFaculty.addFaculty(addingFaculty);
