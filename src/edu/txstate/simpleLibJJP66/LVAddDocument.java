@@ -47,16 +47,60 @@ public class LVAddDocument extends ConsoleWindow{
 		}
 	}
 	
-	public void addBook() {
-		// Add book
-		System.out.println("\nEntered addBook()");
-		Data.addBook();
-		
+	public static void addBook() {
+		int copies;
+		String isbn, title, publisher, date, authorName;
+
+		System.out.println("\nEnter title: ");
+		title = bookInput.nextLine();
+
+		System.out.println("\nEnter Publisher: ");
+		publisher = bookInput.nextLine();
+
+		System.out.println("\nEnter Date: ");
+		date = bookInput.nextLine();
+
+		System.out.println("\nEnter ISBN: ");
+		isbn = bookInput.nextLine();
+
+		System.out.println("\nEnter Copies: ");
+		copies = bookInput.nextInt();
+
+		System.out.println("\nEnter Author First Name: ");
+		authorName = bookInput.nextLine();
+
+		Book addingBook = new Book(title, publisher, date, isbn, copies, authorName);
+		Data.ListOfBooks.addBook(addingBook);
+
 	}
-	
-	public void addJournal() {
-		// Add journal
-		System.out.println("\nEntered addJournal()");
-		Data.addJournal();
+
+	public static void addJournal() {
+		// this method allows the user to enter information for journal
+		String title, publisherDate, publisher, article;
+		int copies, volume, issue;
+
+		System.out.println("\nEnter Title: ");
+		title = journalInput.nextLine();
+
+		System.out.println("\nEnter Publisher Date: ");
+		publisherDate = journalInput.nextLine();
+
+		System.out.println("\nEnter Volume: ");
+		volume = journalInput.nextInt();
+
+		System.out.println("\nEnter Issue: ");
+		issue = journalInput.nextInt();
+
+		System.out.println("\nEnter Copies: ");
+		copies = journalInput.nextInt();
+
+		System.out.println("\nEnter Publisher: ");
+		publisher = journalInput.nextLine();
+
+		System.out.println("\nEnter Article: ");
+		article = journalInput.nextLine();
+
+		Journal addingJournal = new Journal(title, publisherDate, volume, issue, publisher, copies, article);
+		Data.ListOfJournals.addJournal(addingJournal);
 	}
 }
